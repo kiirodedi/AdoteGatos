@@ -10,7 +10,7 @@ const Tab = createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator screenOptions={{ headerShown: false}}>
+      <Tab.Navigator>
         <Tab.Screen name="Menu" component={Menu} />
         <Tab.Screen name="Adote" component={Adote} />
         <Tab.Screen name="Galeria" component={Galeria} />

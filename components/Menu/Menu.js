@@ -1,9 +1,11 @@
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image, Button } from "react-native";
+import { useNavigation } from '@react-navigation/native';
 
 import pataGato from "../../assets/img/pata-gato.png";
 import coracao from "../../assets/img/coracao.webp";
 
 export default function Menu() {
+  const navigation = useNavigation();
   return (
     <View style={estilo.container}>
       {/* Cabeçalho */}
@@ -11,6 +13,14 @@ export default function Menu() {
         <Image source={pataGato} style={estilo.iconCabecalho} />
         <Text style={estilo.titulo}>Adote Miau :3</Text>
         <Image source={coracao} style={estilo.iconCabecalho} />
+      </View>
+      <View style={estilo.nav}>
+        <View style={estilo.btnAdote}>
+          <Button title="Adote" onPress={() => navigation.navigate('Adote')} color="#ff4a86" />
+        </View>
+        <View style={estilo.btnGaleria}>
+        <Button title="Galeria" onPress={() => navigation.navigate('Galeria')} color="#ff4a86" />
+        </View>
       </View>
 
       <View style={estilo.divSobreNos}>
@@ -31,7 +41,7 @@ const estilo = StyleSheet.create({
 
   divSobreNos: {
     backgroundColor: '#ff4a86',
-    margin: 20,
+    margin: 15,
     borderRadius: 10,
   },
 
@@ -61,5 +71,21 @@ const estilo = StyleSheet.create({
     fontSize: 30,
     color: '#fff',
     fontWeight: 'bold',
-  }
+  },
+
+  nav: {
+    flexDirection: 'row',
+    marginTop: 5,
+    marginBottom: 5,
+  },
+
+  btnAdote: {
+    marginRight: 5,
+    width: 100,
+  },
+
+  btnGaleria: {
+    marginLeft: 5,
+    width: 100,
+  },  
 });
