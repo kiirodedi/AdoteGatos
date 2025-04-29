@@ -1,11 +1,11 @@
 import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createStackNavigator } from '@react-navigation/stack';
 
 import Adote from './components/Adote/Adote';
 import Galeria from './components/Galeria/Galeria';
 import Menu from './components/Menu/Menu';
 
-const Tab = createBottomTabNavigator();
+const Tab = createStackNavigator();
 
 export default function App() {
   return (
