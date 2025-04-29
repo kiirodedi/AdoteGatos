@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View, Image } from "react-native";
+import { ScrollView  } from "react-native-gesture-handler";
 
 import pataGato from "../../assets/img/pata-gato.png";
 import coracao from "../../assets/img/coracao.webp";
@@ -13,11 +14,13 @@ export default function Menu() {
         <Image source={coracao} style={estilo.iconCabecalho} />
       </View>
 
+      <ScrollView>
       <View style={estilo.divSobreNos}>
         <Text style={estilo.sobreNos}>
           Olá! Primeiramente, seja muito bem-vindo(a) ao nosso programa Adote Miau. Ficamos muito felizes por você ter tomado essa iniciativa de ajudar os gatinhos que precisam de um lar. Aqui, você encontrará informações sobre como adotar um gato, cuidados necessários e muito mais. Nossa missão é encontrar lares amorosos para esses felinos adoráveis e garantir que eles tenham uma vida feliz e saudável. Se você estiver interessado(a) em adotar um gato ou quiser saber mais sobre o processo, não hesite em entrar em contato conosco. Estamos aqui para ajudar! Obrigado por fazer a diferença na vida desses gatinhos! 🐾❤️
         </Text>
       </View>
+      </ScrollView>
     </View>
   );
 }
@@ -40,6 +43,7 @@ const estilo = StyleSheet.create({
     padding: 20,
     color: '#fff',
     textAlign: 'center',
+    margin: 20,
   },
 
   cabecalho: {
