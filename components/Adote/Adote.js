@@ -21,7 +21,7 @@ export default function Adote() {
         <Image source={coracao} style={estilo.iconCabecalho} />
       </View>
 
-      <ScrollView>
+      <ScrollView contentContainerStyle={{ paddingBottom: 20 }}>
       <View style={estilo.divGato}>
         <Image source={gato1} style={estilo.imgGato} />
         <View stye={estilo.descricao}>
